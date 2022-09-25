@@ -149,6 +149,8 @@ const weather = (city) => {
   </div>
 
   `;
+  document.getElementById("searchBar").value = "";
+  document.getElementById("searchBar").focus();
 };
 const button = document.getElementById("button");
 button.addEventListener("click", () => {
@@ -167,6 +169,9 @@ button.addEventListener("click", () => {
     document.querySelector("h4").style.fontSize = "1.5rem";
     return;
   }
+  document.querySelector("h4").innerText =
+    "(You can learn the weather of the city you want by typing it in the left box.)";
+  document.querySelector("h4").style.color = "white";
   getweather(searchbar.value);
 });
 
