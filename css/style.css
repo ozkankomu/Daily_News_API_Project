@@ -184,5 +184,6 @@ i:hover {
 
 .weathercondition {
   background-color: red;
+  margin-left: 1rem;
   background-image: url(https://www.kosovahaber.net/repository/images/diger/moti-shqiperi-780x439.jpg);
 }

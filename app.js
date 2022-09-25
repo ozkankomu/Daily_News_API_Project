@@ -134,7 +134,7 @@ const weather = (city) => {
   console.log(cities);
 
   search.innerHTML += `
-  <div class="weathercondition card col-lg-4" style="max-width: 540px; box-shadow:3px 3px 5px darkgray">
+  <div class="weathercondition card col-lg-3" style="max-width: 540px; box-shadow:3px 3px 5px darkgray">
     <div class="row g-0 weathercondition">     
       <div class="col ">
       <div class="card-body">
@@ -147,8 +147,8 @@ const weather = (city) => {
       </div>
     </div>
   </div>
-
   `;
+
   document.getElementById("searchBar").value = "";
   document.getElementById("searchBar").focus();
 };
@@ -160,6 +160,8 @@ button.addEventListener("click", () => {
     document.querySelector("h4").innerText = "(This city was just shown..!!!)";
     document.querySelector("h4").style.color = "red";
     document.querySelector("h4").style.fontSize = "1.5rem";
+    document.getElementById("searchBar").value = "";
+    document.getElementById("searchBar").focus();
     return;
   }
   if (cities.length >= 3) {
@@ -167,6 +169,8 @@ button.addEventListener("click", () => {
       "(Sorry, you can query up to 3 cities at a time.. !!!)";
     document.querySelector("h4").style.color = "red";
     document.querySelector("h4").style.fontSize = "1.5rem";
+    document.getElementById("searchBar").value = "";
+    document.getElementById("searchBar").focus();
     return;
   }
   document.querySelector("h4").innerText =
