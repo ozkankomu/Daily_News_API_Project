@@ -132,7 +132,6 @@ const weather = (city) => {
 
   cities.push(name.toLowerCase());
   console.log(city);
-
   search.innerHTML =
     `
   <div class="weathercondition card col-lg-3" style="max-width: 540px; box-shadow:3px 3px 5px darkgray">
