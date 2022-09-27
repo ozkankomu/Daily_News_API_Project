@@ -1,8 +1,8 @@
 const getNewsSience = () => {
-  const key = "7bf94028e4cb4de1a9b278cc03c55fd0";
+  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
   const url =
     "https://newsapi.org/v2/top-headlines?country=tr&category=science&apiKey=" +
-    key;
+    value;
 
   fetch(url)
     .then((result) => {
@@ -36,10 +36,10 @@ getNewsSience();
 //! ////////////////////////////////////   second section ///////////////////
 
 const getNewsBusines = () => {
-  const key = "7bf94028e4cb4de1a9b278cc03c55fd0";
+  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
   const url =
     "https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=" +
-    key;
+    value;
 
   fetch(url)
     .then((result) => {
@@ -73,8 +73,8 @@ getNewsBusines();
 //! /////////////////  section 3 /////////////////////////
 
 const getNewsJs = () => {
-  const key = "7bf94028e4cb4de1a9b278cc03c55fd0";
-  const url = "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + key;
+  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
+  const url = "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + value;
 
   fetch(url)
     .then((result) => {
@@ -107,10 +107,10 @@ getNewsJs();
 
 //! //////////////////// /////////////////////////////////
 const url = "https://api.openweathermap.org/data/2.5/";
-const key = "8c38f1e0c78955af74faebdb3c43902b";
+const value = "8c38f1e0c78955af74faebdb3c43902b";
 let cities = [];
 const getweather = (city) => {
-  let urll = `${url}weather?q=${city}&appid=${key}&units=metric&lang=tr`;
+  let urll = `${url}weather?q=${city}&appid=${value}&units=metric&lang=tr`;
   fetch(urll)
     .then((weather) => {
       return weather.json();
