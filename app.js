@@ -132,7 +132,9 @@ const weather = (city) => {
 
   cities.push(name.toLowerCase());
   console.log(city);
-  search.innerHTML += `
+
+  search.innerHTML =
+    `
   <div class="weathercondition card col-lg-3" style="max-width: 540px; box-shadow:3px 3px 5px darkgray">
     <div class="row g-0 weathercondition">     
       <div class="col ">
@@ -146,7 +148,7 @@ const weather = (city) => {
       </div>
     </div>
   </div>
-  `;
+  ` + search.innerHTML;
 
   document.getElementById("searchBar").value = "";
   document.getElementById("searchBar").focus();
