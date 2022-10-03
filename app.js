@@ -1,116 +1,128 @@
-const getNewsSience = () => {
-  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
-  const url =
-    "https://newsapi.org/v2/top-headlines?country=tr&category=science&apiKey=" +
-    value;
+// const getNewsSience = () => {
+//   const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
+//   const url =
+//     "https://newsapi.org/v2/top-headlines?country=tr&category=science&apiKey=" +
+//     value;
 
-  fetch(url)
-    .then((result) => {
-      if (!result.status) {
-        console.log("warning Errorrrrrrr....!!!!");
-      }
-      return result.json();
-    })
-    .then((data) => siencePage(data.articles));
-};
+//   fetch(url)
+//     .then((result) => {
+//       if (!result.status) {
+//         console.log("warning Errorrrrrrr....!!!!");
+//       }
+//       return result.json();
+//     })
+//     .then((data) => siencePage(data.articles));
+// };
 
-const siencePage = (news) => {
-  const div1 = document.querySelector("#div1");
-  news.forEach((news) => {
-    const { description, title, url, urlToImage } = news;
-    div1.innerHTML += `
-    <div class=" card gap-4 mb-3">
-  <img src="${urlToImage}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text">${description}</p>
-    <a href="${url}" class="btn btn-primary">Details of the News</a>
-  </div>
-</div>
-    `;
-  });
-};
+// const siencePage = (news) => {
+//   const div1 = document.querySelector("#div1");
+//   news.forEach((news) => {
+//     const { description, title, url, urlToImage } = news;
+//     div1.innerHTML += `
+//     <div class=" card gap-4 mb-3">
+//   <img src="${urlToImage}" class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">${title}</h5>
+//     <p class="card-text">${description}</p>
+//     <a href="${url}" class="btn btn-primary">Details of the News</a>
+//   </div>
+// </div>
+//     `;
+//   });
+// };
 
-getNewsSience();
+// getNewsSience();
 
-//! ////////////////////////////////////   second section ///////////////////
+// //! ////////////////////////////////////   second section ///////////////////
 
-const getNewsBusines = () => {
-  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
-  const url =
-    "https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=" +
-    value;
+// const getNewsBusines = () => {
+//   const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
+//   const url =
+//     "https://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=" +
+//     value;
 
-  fetch(url)
-    .then((result) => {
-      if (!result.status) {
-        console.log("warning Errorrrrrrr....!!!!");
-      }
-      return result.json();
-    })
-    .then((data) => businesPage(data.articles));
-};
+//   fetch(url)
+//     .then((result) => {
+//       if (!result.status) {
+//         console.log("warning Errorrrrrrr....!!!!");
+//       }
+//       return result.json();
+//     })
+//     .then((data) => businesPage(data.articles));
+// };
 
-const businesPage = (news) => {
-  const div1 = document.querySelector("#div2");
-  news.forEach((news) => {
-    const { description, title, url, urlToImage } = news;
-    div1.innerHTML += `
-    <div class="card gap-4 mb-3">
-  <img src="${urlToImage}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text">${description}</p>
-    <a href="${url}" class="btn btn-primary">Details of the News</a>
-  </div>
-</div>
-    `;
-  });
-};
+// const businesPage = (news) => {
+//   const div1 = document.querySelector("#div2");
+//   news.forEach((news) => {
+//     const { description, title, url, urlToImage } = news;
+//     div1.innerHTML += `
+//     <div class="card gap-4 mb-3">
+//   <img src="${urlToImage}" class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">${title}</h5>
+//     <p class="card-text">${description}</p>
+//     <a href="${url}" class="btn btn-primary">Details of the News</a>
+//   </div>
+// </div>
+//     `;
+//   });
+// };
 
-getNewsBusines();
+// getNewsBusines();
 
-//! /////////////////  section 3 /////////////////////////
+// //! /////////////////  section 3 /////////////////////////
 
-const getNewsJs = () => {
-  const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
-  const url = "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + value;
+// const getNewsJs = () => {
+//   const value = "7bf94028e4cb4de1a9b278cc03c55fd0";
+//   const url = "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + value;
 
-  fetch(url)
-    .then((result) => {
-      if (!result.status) {
-        console.log("warning Errorrrrrrr....!!!!");
-      }
-      return result.json();
-    })
-    .then((data) => jsPage(data.articles));
-};
+//   fetch(url)
+//     .then((result) => {
+//       if (!result.status) {
+//         console.log("warning Errorrrrrrr....!!!!");
+//       }
+//       return result.json();
+//     })
+//     .then((data) => jsPage(data.articles));
+// };
 
-const jsPage = (news) => {
-  const div1 = document.querySelector("#div3");
-  news.forEach((news) => {
-    const { description, title, url, urlToImage } = news;
-    div1.innerHTML += `
-    <div class="card gap-4 mb-3">
-  <img src="${urlToImage}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text">${description}</p>
-    <a href="${url}" class="btn btn-primary">Details of the News</a>
-  </div>
-</div>
-    `;
-  });
-};
+// const jsPage = (news) => {
+//   const div1 = document.querySelector("#div3");
+//   news.forEach((news) => {
+//     const { description, title, url, urlToImage } = news;
+//     div1.innerHTML += `
+//     <div class="card gap-4 mb-3">
+//   <img src="${urlToImage}" class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">${title}</h5>
+//     <p class="card-text">${description}</p>
+//     <a href="${url}" class="btn btn-primary">Details of the News</a>
+//   </div>
+// </div>
+//     `;
+//   });
+// };
 
-getNewsJs();
+// getNewsJs();
 
 //! //////////////////// /////////////////////////////////
+
+// localStorage.setItem(
+//   "tokenKeyEncrypted",
+//   EncryptStringAES("4d8fb5b93d4af21d66a2948710284366")
+// );
+
+localStorage.setItem(
+  "tokenKey",
+  "RAPAIooyOVFdRNn7gPi6i8vUp3OJvy0Np5wgMGgNO0a2a258kya95/arqJmhPrWc"
+);
+
 const url = "https://api.openweathermap.org/data/2.5/";
-const value = "8c38f1e0c78955af74faebdb3c43902b";
+const tokenKey = DecryptStringAES(localStorage.getItem("tokenKey"));
+console.log(tokenKey);
 let cities = [];
 const getweather = (city) => {
-  let urll = `${url}weather?q=${city}&appid=${value}&units=metric&lang=tr`;
+  let urll = `${url}weather?q=${city}&appid=${tokenKey}&units=metric&lang=tr`;
   fetch(urll)
     .then((weather) => {
       return weather.json();
